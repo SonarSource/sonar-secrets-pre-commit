@@ -15,7 +15,7 @@ This helps prevent accidental leakage of sensitive information into your codebas
 
 ## Installation
 
-See [How to install "sonar-secrets" CLI as a pre-commit hook?](https://docs.google.com/document/d/1OKY4dlcn5o_QHlMa3lXtQXPg3hrl4hz-4NBPXbGG37M/edit?tab=t.0#heading=h.yhp1i1g0e22v)
+(internal documentation) See [How to install "sonar-secrets" CLI as a pre-commit hook?](https://docs.google.com/document/d/1OKY4dlcn5o_QHlMa3lXtQXPg3hrl4hz-4NBPXbGG37M/edit?tab=t.0#heading=h.yhp1i1g0e22v) .
 
 ## Limitations
 
