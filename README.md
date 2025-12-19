@@ -15,6 +15,8 @@ This helps prevent accidental leakage of sensitive information into your codebas
 
 ## Installation
 
+Note: if you're a SonarSourcer, see the internal ["How to install "sonar-secrets" CLI as a pre-commit hook?"](https://docs.google.com/document/d/1OKY4dlcn5o_QHlMa3lXtQXPg3hrl4hz-4NBPXbGG37M/edit?tab=t.0#heading=h.yhp1i1g0e22v)
+
 The [pre-commit](https://pre-commit.com/) framework is required.
 
 Create in the root directory of your Git repository a `.pre-commit-config.yaml`:
