@@ -15,7 +15,43 @@ This helps prevent accidental leakage of sensitive information into your codebas
 
 ## Installation
 
-(internal documentation) See [How to install "sonar-secrets" CLI as a pre-commit hook?](https://docs.google.com/document/d/1OKY4dlcn5o_QHlMa3lXtQXPg3hrl4hz-4NBPXbGG37M/edit?tab=t.0#heading=h.yhp1i1g0e22v) .
+Note: if you're a SonarSourcer, see the internal ["How to install "sonar-secrets" CLI as a pre-commit hook?"](https://docs.google.com/document/d/1OKY4dlcn5o_QHlMa3lXtQXPg3hrl4hz-4NBPXbGG37M/edit?tab=t.0#heading=h.yhp1i1g0e22v)
+
+The [pre-commit](https://pre-commit.com/) framework is required.
+
+Create in the root directory of your Git repository a `.pre-commit-config.yaml`:
+```yaml
+repos:
+-   repo: https://github.com/SonarSource/sonar-secrets-pre-commit
+    rev: v2.36.0.10152
+    hooks:
+    -   id: sonar-secrets
+        stages: [pre-commit]
+```
+
+Then run:
+```bash
+pre-commit autoupdate
+pre-commit uninstall
+pre-commit clean
+pre-commit install
+```
+
+## Set Up Authentication
+
+Authentication to a SonarQube Server instance or to SonarQube Cloud is required.
+It can be done by setting 2 environment variables.
+
+For SonarQube Server:
+- `SONAR_SECRETS_AUTH_URL`: the URL of your SonarQube instance (e.g., https://example.sonarqube.com)
+- `SONAR_SECRETS_TOKEN`: a token of any type (can be created at "/account/security")
+
+For SonarQube Cloud:
+- `SONAR_SECRETS_AUTH_URL`: the URL of a SonarQube Cloud (e.g., https://sonarcloud.io)
+- `SONAR_SECRETS_TOKEN`: a token (e.g., can be created at https://sonarcloud.io/account/security)
+
+Note: the authentication process will be retriggered every 7 days, so these environment variables should be safely persisted.
+
 
 ## Limitations
 
