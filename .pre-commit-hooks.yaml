@@ -2,7 +2,7 @@
 -   id: sonar-secrets
     name: Sonar Secrets
     description: "Prevents secrets from being committed to the repository with Sonar's detection engine"
-    entry: sonar-secrets
+    entry: sonar-secrets --non-interactive
     language: python
     types: [file]
     require_serial: true
