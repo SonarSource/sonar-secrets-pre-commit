@@ -16,7 +16,7 @@ import urllib.error
 
 # --- Configuration ---
 # The version used in the download URL tag
-TAG_VERSION = "2.36.0.10152"
+TAG_VERSION = "2.38.0.10279"
 # The full version used in the binary filenames
 BINARY_VERSION = TAG_VERSION
 # GitHub repository details
