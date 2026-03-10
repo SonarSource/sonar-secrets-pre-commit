@@ -16,7 +16,7 @@ import urllib.error
 
 # --- Configuration ---
 # The version used in the download URL tag
-TAG_VERSION = "2.38.0.10279"
+TAG_VERSION = "2.41.0.10709"
 # The full version used in the binary filenames
 BINARY_VERSION = TAG_VERSION
 # GitHub repository details
@@ -30,14 +30,17 @@ def get_target_binary_name():
     machine = platform.machine().lower()
 
     if system == "linux":
-        platform_id = "linux-x86-64"
+        if "arm" in machine or "aarch64" in machine:
+            platform_id = "linux-arm64"
+        else:
+            platform_id = "linux-x86-64"
     elif system == "darwin" and ("arm" in machine or "aarch64" in machine):
         platform_id = "macos-arm64"
     elif system == "windows":
         platform_id = "windows-x86-64.exe"
     else:
         print(f"Error: Unsupported system/architecture combination: {system}/{machine}", file=sys.stderr)
-        print("Supported platforms: Linux (x86-64), Windows (x86-64), macOS (ARM64)", file=sys.stderr)
+        print("Supported platforms: Linux (x86-64, ARM64), Windows (x86-64), macOS (ARM64)", file=sys.stderr)
         sys.exit(1)
         
     return f"sonar-secrets-{BINARY_VERSION}-{platform_id}"
