@@ -23,7 +23,7 @@ Create in the root directory of your Git repository a `.pre-commit-config.yaml`:
 ```yaml
 repos:
 -   repo: https://github.com/SonarSource/sonar-secrets-pre-commit
-    rev: v2.38.0.10279
+    rev: v2.41.0.10709
     hooks:
     -   id: sonar-secrets
         stages: [pre-commit]
