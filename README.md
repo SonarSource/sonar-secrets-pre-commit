@@ -1,12 +1,21 @@
 # SonarSecrets CLI Pre-Commit Hook
 
+> [!WARNING]
+> The pre-commit hook in this repository is deprecated and and will be archived.
+> 
+> Please use the [sonarqube-cli](https://github.com/SonarSource/sonarqube-cli) instead.
+> 
+> With the `sonarqube-cli` you're able to install the secrets analysis as a local (and global) pre-commit hook.
+> 
+> Additionally you can integrate the secrets analysis into Claude Code with the help of the `sonarqube-cli`, and even more integrations are planned for the future.
+
+## Overview
+
 This repository hosts **SonarSecrets CLI** binaries for use in pre-commit hooks, enabling detection of secrets before code is committed.
 
 **Important:** The **SonarSecrets Pre-Commit Hook** is currently in ![alpha](https://img.shields.io/badge/status-alpha-orange).
 
 Using the SonarSecrets CLI outside of the pre-commit hook context is **not authorized** and **not supported**.
-
-## Overview
 
 The **SonarSecrets CLI Pre-Commit Hook** integrates with your local Git workflow to automatically scan staged changes for potential secrets (such as API keys, passwords, or tokens) before they are committed.
 
