@@ -1,7 +1,7 @@
 # SonarSecrets CLI Pre-Commit Hook
 
 > [!WARNING]
-> The pre-commit hook in this repository is deprecated and and will be archived.
+> The pre-commit hook in this repository is deprecated and will be archived.
 > 
 > Please use the [sonarqube-cli](https://github.com/SonarSource/sonarqube-cli) instead.
 > 
